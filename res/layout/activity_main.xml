@@ -1,0 +1,121 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+ >
+ <LinearLayout android:id="@+id/ll_content"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:orientation="vertical">
+ <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                >
+                <!-- 最上面一行：RadioGroup和小绿条 -->
+                <RadioGroup
+                    android:id="@+id/rg_indexActivity"
+                    android:layout_width="wrap_content"
+                   	android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/rb1_indexActivity"
+                        style="@style/rb_index"
+                        android:textColor="@drawable/rb_selector"
+                        android:text="头条" />
+
+                    <RadioButton
+                        android:id="@+id/rb2_indexActivity"
+                        android:textColor="@drawable/rb_selector"
+                        style="@style/rb_index"
+                        android:text="百科" />
+
+                    <RadioButton
+                        android:id="@+id/rb3_indexActivity"
+                        android:textColor="@drawable/rb_selector"
+                        style="@style/rb_index"
+                        android:text="咨询" />
+
+                    <RadioButton
+                        android:id="@+id/rb4_indexActivity"
+                        android:textColor="@drawable/rb_selector"
+                        style="@style/rb_index"
+                        android:text="经营" />
+
+                    <RadioButton
+                        android:id="@+id/rb5_indexActivity"
+                        android:textColor="@drawable/rb_selector"
+                        style="@style/rb_index"
+                        android:text="数据" />
+                </RadioGroup>
+       <ImageView
+                android:id="@+id/imgv_openDrawer"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:src="@drawable/more" />
+        </LinearLayout>
+  <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/topline" />
+<android.support.v4.view.ViewPager
+    android:id="@+id/vp_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
+</LinearLayout>
+ <LinearLayout
+        android:id="@+id/drawerMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:layout_gravity="right"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imgv_closeDrawer"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/searchbackbtn" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:text="茶百科"
+            android:layout_toRightOf="@+id/imgv_closeDrawer"
+            android:textSize="18sp"
+            android:gravity="center"
+            />
+        </RelativeLayout>
+          <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/topline" />
+<RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="30dp">
+    <EditText android:id="@+id/et_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="请输入要搜索的内容"
+        android:textSize="16sp"
+        />
+    <ImageView android:id="@+id/iv_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/et_search"
+        android:background="@drawable/gosearch"
+        android:onClick="onClick"/>
+    </RelativeLayout>
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>

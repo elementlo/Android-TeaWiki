@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imgv_closeDrawer"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/searchbackbtn" />
+
+        <TextView android:id="@+id/tv_searchtitle"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:text="茶百科"
+            android:layout_toRightOf="@+id/imgv_closeDrawer"
+            android:textSize="18sp"
+            android:gravity="center"
+            />
+        </RelativeLayout>
+      <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/topline" />
+
+</LinearLayout>
